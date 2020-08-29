@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!------ Include the above in your HEAD tag ---------->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+   font-family: "metropolis";
+}
+html, body {
+    height: 200%;
+}
+.container
+{
+width:200px;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.search_hero{
+    height: 100px;
+    width: 100px;
+    
+    
+    
+    border-radius: 50%;
+    color:rgb(100, 90, 90);
+    text-decoration:none;
+    }
+
+/* Responsive columns */
+.card:hover { box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+div.row{
+  padding: 200px;
+}
+
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  background-color: #ffffff;
+  max-width: 1000px;
+  cursor: pointer;
+   
+    min-height: 250px;
+}
+</style>
+</head>
+<body>
+  
+    <div class="row">
+
+      
+      
+      
+<div  class="form-control">
+ 
+  <!-- <input class="form-control" type="text" name="search" [(ngModel)]="searchreciepe" autocomplete="off" placeholder="&#61442;  Search your fav dish">
+   -->
+</div>
+
+<!-- <select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select> -->
+<div  align="right" class="container1"  >
+      
+  <!-- <h2>Category</h2>
+  <select name="catagory" id="catagory" [(ngModel)]="searchcategory" autocomplete="off">
+    <option value="">Select Category</option>
+      <option value="mains">Main</option>
+    <option value="appetizer">Appetizer</option>
+    <option value="dessert">Dessert</option>
+    <option value="clone">clone</option>
+    <option value="weird">Weird</option>
+  </select> -->
+
+</div> 
+<!-- <ul>
+  <li *ngFor="let p of ac | unique">
+    {{p.Country}}
+  </li>
+</ul> -->
+
+
+      
+<div  class="form-control">
+ 
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchreciepe" autocomplete="off" placeholder="&#61442;  Search ">
+  
+</div>
+ 
+  <div *ngFor="let p of ac | filter:searchreciepe" >
+  <div class="column">
+   
+     <div class="card" >
+      <div (click)="doStuff(p)">
+      <!-- style="width: 13rem; -->
+  
+        
+        <div class="card-body">
+     
+       <br>
+     
+       {{p.Country}}
+       <br>
+       {{p.Brand}}
+       <br>
+       {{p.Variety}}
+       <br>
+       {{p.Pack}}
+       <br>
+       {{p.Stars}}
+      
+       
+<br>
+<br>
+     
+        
+         <br><br>
+        
+         
+         <br><br>
+         
+         
+        
+        </div>
+      </div>
+      
+        </div>
+         
+  
+        <!-- window.location.href='http://starlord.hackerearth.com/recipe/{p.id}' -->
+       <!-- <div class="card" style="width: 18rem;">
+        <img src={{p.image}}  style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>  -->
+ 
+    </div>
+ 
+</div>
+</div>
+
+</body>
+</html>
+
+
+<!-- <div class="row">
+  <div *ngFor="let p of ac">
+  
+<div class="card">
+
+  <div class="column">
+   
+   
+    
+   
+  
+ 
+  <div class="container">
+  <img src={{p.image}}  style="width:50%">
+  
+    <h4><b>{{p.label}}</b></h4> 
+    <p>{{p.category}}</p> 
+    <p>{{p.name}}</p> 
+    <h2>{{p.price}}</h2> 
+  </div>
+</div>
+</div>
+</div>  -->
